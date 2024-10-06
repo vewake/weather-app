@@ -12,6 +12,7 @@ export default async function Weather({ params }: { params: { location: string }
     );
 
   } catch (e) {
+    console.log(e)
     return (
       <div className=" w-full h-full flex flex-col items-center justify-center ">
         <div className="m-8 p-4 text-7xl text-zinc-700 font-bold">
