@@ -2,7 +2,7 @@
 
 const nextConfig = {
   images: {
-    domains: ['flagcdn.com'], // Add your domain here
+    domains: ['flagcdn.com', "openweathermap.org"], // Add your domain here
   },
 };
 

@@ -6,14 +6,6 @@ export default function Home() {
   // const ip = (header.get('x-forwarded-for') ?? '127.0.0.1').split(',')[0]
   return (
     <div>
-      <div className="grid grid-cols-2 gap-4 ">
-        <div>
-          akdfsj
-        </div>
-        <div>
-          heleh
-        </div>
-      </div>
       <div >
         <TopBar />
       </div>
@@ -23,7 +15,9 @@ export default function Home() {
           <div className="text-center text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-cyan-400">
             Weather App
           </div >
-          <SearchPage />
+          <div className="p-8">
+            <SearchPage />
+          </div>
         </div>
       </div>
     </div >
