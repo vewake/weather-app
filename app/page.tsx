@@ -6,11 +6,9 @@ import { redirect } from "next/navigation";
 export default async function Home() {
   const header = headers()
   const ip = (header.get('x-forwarded-for') ?? '127.0.0.1').split(',')[0]
-  let response = await axios.get(`http://ip-api.com/json/${ip}`)
-  let ipdata = response.data
-  if (ipdata.status === 'fail') {
-
-  } else {
+  const response = await axios.get(`http://ip-api.com/json/${ip}`)
+  const ipdata = response.data
+  if (ipdata.status != 'fail') {
     redirect(`/search/${ipdata.city}`)
   }
 
