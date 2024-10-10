@@ -8,14 +8,16 @@ export default async function Weather({ params }: { params: { location: string }
     const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=eb27f1a52ef4312eb4c2980a1833d852&units=metric`)
     const weatherdata = response.data
     return (
-      <WeatherPage response={weatherdata} />
+      <div>
+        <WeatherPage response={weatherdata} />
+      </div>
     );
 
   } catch (e) {
     console.log(e)
     return (
       <div className=" w-full h-full flex flex-col items-center justify-center ">
-        <div className="m-8 p-4 text-7xl text-zinc-700 font-bold">
+        <div className="m-8 p-4 lg:text-7xl text-zinc-700 font-bold">
           Weather for {location} is not available, try another location
         </div>
         <Link href="/">

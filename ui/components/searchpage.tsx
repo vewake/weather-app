@@ -43,7 +43,7 @@ export default function SearchPage() {
                 }
               }
             }}
-            type="text" placeholder="Search..." className="rounded-lg bg-sky-200 p-2 m-2 text-2xl text-black" />
+            type="text" placeholder="Search..." className="lg:w-96 w-60 rounded-lg bg-sky-200 p-1 m-1 lg:p-2 lg:m-2 text-xl lg:text-2xl text-black" />
         </div>
         <Link href={`/search/${search}`}>
           <div className="cursor-pointer">
