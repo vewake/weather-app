@@ -1,31 +1,26 @@
-import Image from "next/image";
-
-export default function WeatherPage({ response }: { response: any }) {
-
+import Image from "next/image"
+export default function Loading() {
   return (
     <div>
       <div className="w-full h-full flex flex-col items-center justify-center ">
         <div className=" lg:m-8 lg:p-4 text-7xl text-zinc-700 font-bold">
           <div className="flex flex-row ">
             <div>
-              {response.name}
+              Loading...
             </div>
             <div className="mt-4 ml-4">
-              <Image src={`https://flagcdn.com/144x108/${response.sys.country.toLowerCase()}.png`} alt="icon" width={50} height={50} className="" />
             </div>
           </div>
         </div>
       </div>
       <div className="w-full  flex lg:flex-row flex-col justify-center items-center">
         <div className="-m-14 lg:visible invisible">
-          <Image src={'https://openweathermap.org/img/wn/' + response?.weather?.[0]?.icon + '.png'} alt="icon" width={120} height={120}
 
-            className="mt-2" />
         </div>
         <div className="text-center m-12 text-5xl lg:text-8xl font-bold lg:p-12 lg:m-12 lg:border-r-2 ">
-          {Math.floor(response.main.temp)}°C
+          loading...
           <div className="text-2xl text-center lg:text-2xl">
-            {response.weather[0].description}
+            loading....
           </div>
         </div>
 
@@ -36,8 +31,7 @@ export default function WeatherPage({ response }: { response: any }) {
               <Image src={'/wind.svg'} alt={'wind'} width={80} height={80} />
             </div>
             <div>
-              Wind Speed - {response.wind.speed} Km/h
-            </div>
+              Wind Speed -  loading...           </div>
           </div>
 
 
@@ -46,8 +40,7 @@ export default function WeatherPage({ response }: { response: any }) {
               <Image src={'/humidity.png'} alt={'wind'} width={80} height={80} />
             </div>
             <div>
-              Humidity - {response.main.humidity}%
-            </div>
+              Humidity -  loading....           </div>
           </div>
 
 
@@ -56,7 +49,7 @@ export default function WeatherPage({ response }: { response: any }) {
               <Image src={'/clouds.png'} alt={'wind'} width={80} height={80} />
             </div>
             <div>
-              {response.clouds.all}%
+              loading....
             </div>
           </div>
 

@@ -1,17 +1,6 @@
 import SearchPage from "@/ui/components/searchpage";
 import TopBar from "@/ui/components/topbar";
-import axios from "axios";
-import { headers } from 'next/headers'
-import { redirect } from "next/navigation";
 export default async function Home() {
-  const header = headers()
-  const ip = (header.get('x-forwarded-for') ?? '127.0.0.1').split(',')[0]
-  const response = await axios.get(`http://ip-api.com/json/${ip}`)
-  const ipdata = response.data
-  if (ipdata.status != 'fail') {
-    redirect(`/search/${ipdata.city}`)
-  }
-
   return (
     <div>
       <div >
